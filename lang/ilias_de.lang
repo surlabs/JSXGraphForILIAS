@@ -1,0 +1,13 @@
+cmd_insert#:#JSXGraph einfügen
+edit_ex_el#:#JSXGraph editieren
+content_plugin_version#:#Content last edited with version
+mode#:#Mode
+property#:#Einstellungen
+settings_1#:#Graph bearbeiten
+width#:#Graph Breite
+height#:#Graph Höhe
+jsxpreview#:#Vorschau
+runcode#:#Code ausführen
+jsxID#:#Graph ID
+jsxID_info#:#Diese Kennung muss im Code für das Graphelement verwendet werden.
+jsxcode_info#:#Hilfe für die Erstellung von JSXGraph-Code sowie zahlreiche Beispiele erhältlich unter http://jsxgraph.uni-bayreuth.de/wp/docs.html

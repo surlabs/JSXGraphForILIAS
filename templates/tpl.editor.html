@@ -1,0 +1,42 @@
+<!-- BEGIN content -->
+<input type="hidden" name="jsxcode" id="jsxhidden" value="{JSXCODE}"></input>
+<input type="hidden" name="graphbox" value="{GRAPHBOX}"></input>
+<div id="{GRAPHBOX}" class="jxgbox" style="width:500px; height:400px; "></div>
+<br clear="all">
+<button class="btn btn-default" id="runcode">{TXT_RUN_CODE}</button>
+
+<pre id="jsxcode">{JSXCODE}</pre>
+<link rel="stylesheet" href="{BASEDIR}/css/jsxgraph.css" type="text/css" ></link>
+<script src="{BASEDIR}/js/jsxgraphcore.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="{BASEDIR}/css/aceeditor.css" type="text/css" ></link>
+<script src="{BASEDIR}/js/ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("jsxcode");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+    editor.getSession().on("change", function () {
+        $('#jsxhidden').val(editor.getSession().getValue());
+    });
+    lang = ace.require("ace/lib/lang");
+    var delayedEval = lang.delayedCall(function() {
+        var js = editor.getValue()
+	    eval(js)
+    });
+    $('#runcode').on('click',function(){
+        $('#box1').html("");
+	delayedEval.schedule(500)
+	return false;
+    });
+
+    $('#width').on('keyup',function(){
+       $('#jsxgraphbox').css("width",$('#width').val()+"px");    
+       return false;
+    });
+
+    $('#height').on('keyup',function(){
+       $('#jsxgraphbox').css("height",$('#height').val()+"px");    
+       return false;
+    });
+</script>
+<!-- END content -->
+
