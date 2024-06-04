@@ -11,4 +11,4 @@ jsxpreview#:#Preview
 runcode#:#Run code
 jsxID#:#Graph ID
 jsxID_info#:#This ID needs to be used for the graph element inside the code.
-jsxcode_info#:#Help for creating JSXGraph-Code as well as numerous examples are available on http://jsxgraph.uni-bayreuth.de/wp/docs.html
+jsxcode_info#:#Help for creating JSXGraph-Code as well as numerous examples are available on https://jsxgraph.uni-bayreuth.de/wp/about/index.html

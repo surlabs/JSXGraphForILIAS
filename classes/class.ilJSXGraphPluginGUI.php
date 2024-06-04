@@ -187,6 +187,7 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
         $tpl->setVariable('HEIGHT', $a_properties['height']);
         $tpl->setVariable('WIDTH', $a_properties['width']);
         $tpl->setVariable('GRAPHBOX', $a_properties['graphbox']);
+        $tpl->setVariable('BASEDIR', $pl->getDirectory());
 
         return $tpl->get();
     }

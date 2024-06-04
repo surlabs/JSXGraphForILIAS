@@ -10,4 +10,4 @@ jsxpreview#:#Vorschau
 runcode#:#Code ausführen
 jsxID#:#Graph ID
 jsxID_info#:#Diese Kennung muss im Code für das Graphelement verwendet werden.
-jsxcode_info#:#Hilfe für die Erstellung von JSXGraph-Code sowie zahlreiche Beispiele erhältlich unter http://jsxgraph.uni-bayreuth.de/wp/docs.html
+jsxcode_info#:#Hilfe für die Erstellung von JSXGraph-Code sowie zahlreiche Beispiele erhältlich unter https://jsxgraph.uni-bayreuth.de/wp/about/index.html
