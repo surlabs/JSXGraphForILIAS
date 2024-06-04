@@ -20,10 +20,10 @@ class ilJSXGraphPlugin extends ilPageComponentPlugin {
     }
 
     public function getJavascriptFiles($a_mode): array {
-        return array('js/jsxgraphcore.js');
+        return array('templates/js/jsxgraphcore.js');
     }
 
     public function getCssFiles($a_mode): array {
-        return array('css/jsxgraph.css');
+        return array('templates/css/jsxgraph.css');
     }
 }
