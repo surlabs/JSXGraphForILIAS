@@ -11,7 +11,7 @@ class ilJSXGraphPlugin extends ilPageComponentPlugin {
         return 'JSXGraph';
     }
 
-    public function isValidParentType(string $a_type): bool {
+    public function isValidParentType($a_type) {
         if (in_array($a_type, array('lm', 'wpg', 'qpl', 'qfbg', 'qfbs', 'qht'))) {
             return true;
         }
