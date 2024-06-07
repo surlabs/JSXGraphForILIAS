@@ -126,7 +126,7 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
         if (!$a_create) {
             $prop = $this->getProperties();
             $edittpl->setVariable('GRAPHBOX', $prop['graphbox']);
-            $edittpl->setVariable('JSXCODE', $prop['jsxcode']);
+            $edittpl->setVariable('JSXCODE', str_replace('"', '&quot;', $prop['jsxcode']));
             $edittpl->setVariable('HEIGHT', $prop['height']);
             $edittpl->setVariable('WIDTH', $prop['width']);
             $uniqid = $prop ['graphbox'];
