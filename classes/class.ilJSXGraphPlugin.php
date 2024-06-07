@@ -26,4 +26,10 @@ class ilJSXGraphPlugin extends ilPageComponentPlugin {
     public function getCssFiles($a_mode): array {
         return array('templates/css/jsxgraph.css');
     }
+
+    public function onClone(&$a_properties, $a_plugin_version) {
+        $newid = uniqid("jsxgraphbox");
+        $a_properties["jsxcode"] = str_replace($a_properties["graphbox"], $newid, $a_properties["jsxcode"]);
+        $a_properties["graphbox"] = $newid;
+    }
 }
