@@ -1,6 +1,6 @@
 <div alt style="text-align: center; transform: scale(.5);">
 	<picture>
-		<source media="(prefers-color-scheme: dark)" srcset="https://github.com/surlabs/Panopto/blob/ilias8/templates/images/GitBannerPanopto.png" />
+		<source media="(prefers-color-scheme: dark)" srcset="https://github.com/surlabs/JSXGraphPC/blob/ilias8/templates/images/GitBannerJSXGraphPC.png" />
 		<img alt="Panopto" src="https://github.com/surlabs/Panopto/blob/ilias8/templates/images/GitBannerPanopto.png"" />
 	</picture>
 </div>
