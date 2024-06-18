@@ -1,7 +1,7 @@
 <?php
 $id = 'jsxgraph';
 
-$version = '8.0.0';
+$version = '8.0.1';
 
 $ilias_min_version = '8.0';
 $ilias_max_version = '8.999';
