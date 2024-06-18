@@ -8,7 +8,7 @@ declare(strict_types=1);
  */
 class ilJSXGraphPCPlugin extends ilPageComponentPlugin {
     public function getPluginName(): string {
-        return 'JSXGraph';
+        return 'JSXGraphPC';
     }
 
     public function isValidParentType(string $a_type): bool {
