@@ -12,11 +12,7 @@ class ilJSXGraphPCPlugin extends ilPageComponentPlugin {
     }
 
     public function isValidParentType($a_type) {
-        if (in_array($a_type, array('lm', 'wpg', 'qpl', 'qfbg', 'qfbs', 'qht'))) {
-            return true;
-        }
-
-        return false;
+        return true;
     }
 
     public function getJavascriptFiles($a_mode): array {
