@@ -2,12 +2,12 @@
 declare(strict_types=1);
 
 /**
- * Class ilJSXGraphPCPluginGUI
+ * Class ilJSXGraphPluginGUI
  * @authors Saúl Díaz <info@surlabs.es>
- * @ilCtrl_isCalledBy ilJSXGraphPCPluginGUI: ilPCPluggedGUI
- * @ilCtrl_Calls      ilJSXGraphPCPluginGUI: ilObjRootFolderGUI
+ * @ilCtrl_isCalledBy ilJSXGraphPluginGUI: ilPCPluggedGUI
+ * @ilCtrl_Calls      ilJSXGraphPluginGUI: ilObjRootFolderGUI
  */
-class ilJSXGraphPCPluginGUI extends ilPageComponentPluginGUI {
+class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
     private ilCtrl $ctrl;
     private ilGlobalTemplateInterface $tpl;
     private ilTabsGUI $tabs;
