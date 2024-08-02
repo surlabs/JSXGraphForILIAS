@@ -27,7 +27,7 @@ cd Customizing/global/plugins/Services/COPage/PageComponent
 4. Then, execute:
 
 ```bash
-git clone https://github.com/surlabs/JSXGraphPC.git
+git clone https://github.com/surlabs/JSXGraphPC.git JSXGraph
 git checkout ilias7
 ```
 
