@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * Class ilJSXGraphPCPlugin
+ * Class ilJSXGraphPlugin
  * @authors Saúl Díaz <info@surlabs.es>
  * @ilCtrl_isCalledBy ilJSXGraphPCPluginGUI
  */
-class ilJSXGraphPCPlugin extends ilPageComponentPlugin {
+class ilJSXGraphPlugin extends ilPageComponentPlugin {
     public function getPluginName(): string {
-        return 'JSXGraphPC';
+        return 'JSXGraph';
     }
 
     public function isValidParentType(string $a_type): bool {

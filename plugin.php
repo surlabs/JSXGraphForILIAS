@@ -1,5 +1,5 @@
 <?php
-$id = 'jsxgraphpc';
+$id = 'jsxgraph';
 
 $version = '8.0.2';
 
