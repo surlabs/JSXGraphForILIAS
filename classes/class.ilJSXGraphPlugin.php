@@ -4,7 +4,7 @@ declare(strict_types=1);
 /**
  * Class ilJSXGraphPlugin
  * @authors Saúl Díaz <info@surlabs.es>
- * @ilCtrl_isCalledBy ilJSXGraphPCPluginGUI
+ * @ilCtrl_isCalledBy ilJSXGraphPluginGUI
  */
 class ilJSXGraphPlugin extends ilPageComponentPlugin {
     public function getPluginName(): string {
