@@ -1,9 +1,5 @@
-<div alt style="text-align: center; transform: scale(.5);">
-	<picture>
-		<source media="(prefers-color-scheme: dark)" srcset="https://github.com/surlabs/JSXGraphPC/blob/ilias9/templates/images/GitBannerJSXGraphPC.png" />
-		<img alt="JSXGraphPC" src="https://github.com/surlabs/JSXGraphPC/blob/ilias9/templates/images/GitBannerJSXGraphPC.png" />
-	</picture>
-</div>
+![JSXGraph](https://github.com/user-attachments/assets/d2fd6efb-0cdd-4c6b-b578-c8e204fef672)
+
 
 # JSXGraph Page Component Plugin for ILIAS 9
 This plugin allows users to embed JSXGraph in ILIAS as page components
