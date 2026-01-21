@@ -141,7 +141,7 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
         $tpl->setVariable('JSXCODE', html_entity_decode($a_properties['jsxcode']));
         $tpl->setVariable('HEIGHT', $a_properties['height']);
         $tpl->setVariable('WIDTH', $a_properties['width']);
-        $tpl->setVariable('JSXID', $a_properties['jsxID']);
+        $tpl->setVariable('JSXID', $a_properties['jsxID'] ?? $a_properties['graphbox']);
         $tpl->setVariable('BASEDIR', "Customizing/global/plugins/Services/COPage/PageComponent/JSXGraph");
 
         return $tpl->get();
