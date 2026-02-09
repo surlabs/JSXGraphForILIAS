@@ -181,10 +181,6 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
      * @throws ilTemplateException
      */
     public function getElementHTML($a_mode, array $a_properties, $plugin_version): string {
-        global $DIC;
-
-        $DIC->ui()->mainTemplate()->addCss('./Customizing/global/plugins/Services/COPage/PageComponent/JSXGraph/templates/css/jsxgraph.css');
-
         $pl = $this->getPlugin();
         $tpl = $pl->getTemplate('tpl.content.html');
         $tpl->setVariable('JSXCODE', html_entity_decode($a_properties['jsxcode']));
@@ -202,7 +198,7 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
     public function setTabs($a_active): void {
         $pl = $this->getPlugin();
 
-        $this->tabs->addTab('edit', $pl->txt('settings'), $this->ctrl->getLinkTarget($this, 'edit'));
+        $this->tabs->addTab('edit', $pl->txt('settings_1'), $this->ctrl->getLinkTarget($this, 'edit'));
 
         $this->tabs->activateTab($a_active);
     }
