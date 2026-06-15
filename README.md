@@ -12,14 +12,14 @@ See [**JSXGraph-Homepage**](http://jsxgraph.uni-bayreuth.de)
 ## Installation & Update
 
 ### Installation steps
-1. Create subdirectories, if necessary for Customizing/global/plugins/Services/COPage/PageComponent/ or run the following script from the ILIAS root
+1. Create subdirectories, if necessary for public/Customizing/global/plugins/Services/COPage/PageComponent/ or run the following script from the ILIAS root
 
 ```bash
 mkdir -p public/Customizing/global/plugins/Services/COPage/PageComponent
 cd public/Customizing/global/plugins/Services/COPage/PageComponent
 ```
 
-3. In Customizing/global/plugins/Services/COPage/PageComponent/ **ensure you delete any previous jsxgraphpc folder**
+3. In public/Customizing/global/plugins/Services/COPage/PageComponent/ **ensure you delete any previous jsxgraphpc folder**
 4. Then, execute:
 
 ```bash
