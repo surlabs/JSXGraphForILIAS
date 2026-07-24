@@ -7,7 +7,7 @@ declare(strict_types=1);
  * @ilCtrl_isCalledBy ilJSXGraphPluginGUI
  */
 class ilJSXGraphPlugin extends ilPageComponentPlugin {
-    private static $instance;
+    private static ?self $instance = null;
     const PLUGIN_NAME = 'JSXGraph';
 
     public function getPluginName(): string {
@@ -27,7 +27,7 @@ class ilJSXGraphPlugin extends ilPageComponentPlugin {
         $a_properties["jsxID"] = $newid;
     }
 
-    public static function getInstance()
+    public static function getInstance(): self
     {
         if (!isset(self::$instance)) {
             global $DIC;

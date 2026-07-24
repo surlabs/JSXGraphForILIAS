@@ -1,7 +1,7 @@
 ![JSXGraph](https://github.com/user-attachments/assets/d2fd6efb-0cdd-4c6b-b578-c8e204fef672)
 
 
-# JSXGraph Page Component Plugin for ILIAS 10
+# JSXGraph Page Component Plugin for ILIAS 11
 This plugin allows users to embed JSXGraph in ILIAS as page components
 
 ### JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.  ###
@@ -23,8 +23,8 @@ cd public/Customizing/global/plugins/Services/COPage/PageComponent
 4. Then, execute:
 
 ```bash
-git clone https://github.com/surlabs/JSXGraphPC.git JSXGraph
-git checkout release_10
+git clone https://github.com/surlabs/JSXGraphForILIAS.git JSXGraph
+git checkout dev_11
 ```
 
 Ensure you run composer install at platform root before you install/update the plugin
@@ -42,6 +42,7 @@ composer install --no-dev
 - Bug Reports: [Mantis](https://www.ilias.de/mantis) (Choose project "ILIAS plugins" and filter by category "JSXGraphPC")
 
 # Version History
+* The version 11.x.x for **ILIAS 11** developed and maintained by SURLABS can be found in the Github branch **dev_11**
 * The version 10.x.x for **ILIAS 10** developed and maintained by SURLABS can be found in the Github branch **release_10**
 * The version 9.x.x for **ILIAS 9** developed and maintained by SURLABS can be found in the Github branch **release_9**
 * The version 8.x.x for **ILIAS 8** developed and maintained by SURLABS can be found in the Github branch **release_8**

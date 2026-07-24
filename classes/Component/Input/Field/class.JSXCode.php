@@ -10,6 +10,7 @@ use ILIAS\Refinery\Constraint;
 use ILIAS\UI\Component\Input\Field\Textarea;
 use ILIAS\UI\Component\Signal;
 use ILIAS\UI\Implementation\Component\Input\Input;
+use ILIAS\UI\Implementation\Component\Input\Field\HasMustacheVariables as HasMustacheVariablesTrait;
 use ILIAS\UI\Implementation\Component\JavaScriptBindable;
 use ILIAS\UI\Implementation\Component\Triggerer;
 
@@ -20,6 +21,7 @@ use ILIAS\UI\Implementation\Component\Triggerer;
 class JSXCode extends Input implements Textarea {
     use JavaScriptBindable;
     use Triggerer;
+    use HasMustacheVariablesTrait;
 
     public string $jsxID;
     protected string $label;

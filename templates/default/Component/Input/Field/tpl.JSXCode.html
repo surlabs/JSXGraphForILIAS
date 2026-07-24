@@ -1,41 +1,30 @@
-<input type="hidden" name="{NAME}" id="jsxhidden" value="{VALUE}">
+<input type="hidden" name="{NAME}" id="{JSXID}-hidden" value="{VALUE}">
 <div id="{JSXID}" class="jxgbox" style="width:500px; height:400px; "></div>
 <br>
-<button class="btn btn-default" id="runcode">{TXT_RUN_CODE}</button>
-<pre id="jsxcode">{VALUE}</pre>
+<button class="btn btn-default" id="{JSXID}-run-code">{TXT_RUN_CODE}</button>
+<pre id="{JSXID}-code">{VALUE}</pre>
 <link rel="stylesheet" href="{BASEDIR}/templates/css/jsxgraph.css" type="text/css" >
 <link rel="stylesheet" href="{BASEDIR}/templates/css/aceeditor.css" type="text/css" >
 <script src="{BASEDIR}/templates/js/jsxgraphcore.js" type="text/javascript" charset="utf-8"></script>
 <script src="{BASEDIR}/templates/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    const editor = ace.edit("jsxcode");
-    editor.setTheme("ace/theme/twilight");
-    editor.session.setMode("ace/mode/javascript");
-    editor.getSession().on("change", function () {
-        $('#jsxhidden').val(editor.getSession().getValue());
-    });
-    lang = ace.require("ace/lib/lang");
-    const delayedEval = lang.delayedCall(function() {
-        const js = editor.getValue()
-        eval(js)
-    });
-    $('#runcode').on('click',function(){
-        $('#box1').html("");
-        delayedEval.schedule(500)
-        return false;
-    });
-
-    $('#width').on('keyup',function(){
-        $('#jxgbox').css("width",$('#width').val()+"px");
-        return false;
-    });
-
-    $('#height').on('keyup',function(){
-        $('#jxgbox').css("height",$('#height').val()+"px");
-        return false;
-    });
-
-    delayedEval.schedule(500);
+    (() => {
+        const editor = ace.edit("{JSXID}-code");
+        const hiddenInput = document.getElementById("{JSXID}-hidden");
+        const runCode = document.getElementById("{JSXID}-run-code");
+        editor.setTheme("ace/theme/twilight");
+        editor.session.setMode("ace/mode/javascript");
+        editor.getSession().on("change", () => {
+            hiddenInput.value = editor.getSession().getValue();
+        });
+        const delayedEval = ace.require("ace/lib/lang").delayedCall(() => {
+            eval(editor.getValue());
+        });
+        runCode.addEventListener("click", (event) => {
+            event.preventDefault();
+            delayedEval.schedule(500);
+        });
+        delayedEval.schedule(500);
+    })();
 </script>
 <!-- END content -->

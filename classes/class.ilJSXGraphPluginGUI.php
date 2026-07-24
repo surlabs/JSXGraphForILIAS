@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 use ILIAS\UI\Component\Input\Container\Form\Standard;
 use ILIAS\UI\Factory;
+use Psr\Http\Message\ServerRequestInterface;
 use public\Customizing\global\plugins\Services\COPage\PageComponent\JSXGraph\classes\Component\Input\Field\CustomFactory;
 
 /**
@@ -17,7 +18,7 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
     private Factory $factory;
     private CustomFactory $customFactory;
     private \ILIAS\UI\Renderer $renderer;
-    private $request;
+    private ServerRequestInterface $request;
 
 
     public function __construct() {
@@ -135,7 +136,7 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
     /**
      * @throws ilTemplateException
      */
-    public function getElementHTML($a_mode, array $a_properties, $plugin_version): string {
+    public function getElementHTML(string $a_mode, array $a_properties, string $plugin_version): string {
         global $DIC;
 
         $DIC->ui()->mainTemplate()->addCss('./Customizing/global/plugins/Services/COPage/PageComponent/JSXGraph/templates/css/jsxgraph.css');
@@ -154,7 +155,7 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
     /**
      * @throws ilCtrlException
      */
-    public function setTabs($a_active): void {
+    public function setTabs(string $a_active): void {
         global $DIC;
 
         $DIC->tabs()->addTab('edit', $this->lng->txt('settings'), $this->ctrl->getLinkTarget($this, 'edit'));

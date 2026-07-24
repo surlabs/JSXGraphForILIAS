@@ -24,15 +24,11 @@ class Renderer extends RendererILIAS
     /**
      * @throws ilTemplateException
      */
-    public function render(Component $component, ?\ILIAS\UI\Renderer $default_renderer = null): string
+    public function render(Component $component, \ILIAS\UI\Renderer $default_renderer): string
     {
         global $DIC;
 
-        if (isset($default_renderer)) {
-            $this->default_renderer = $default_renderer;
-        } else if (!isset($this->default_renderer)) {
-            $this->default_renderer = $DIC->ui()->renderer();
-        }
+        $this->default_renderer = $default_renderer;
 
         return match (true) {
             $component instanceof JSXCode => $this->renderJSXCode($component),
