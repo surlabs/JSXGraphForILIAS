@@ -93,7 +93,7 @@ class ilJSXGraphPluginGUI extends ilPageComponentPluginGUI {
 
         $prop = $this->getProperties();
 
-        $uniqid = $prop['jsxID'] ?? uniqid('jsxgraphbox');
+        $uniqid = $prop['jsxID'] ?? $prop['graphbox'] ?? uniqid('jsxgraphbox');
         $jsxcode = $prop["jsxcode"] ?? "var brd = JXG.JSXGraph.initBoard('" . $uniqid . "', {boundingbox: [-2, 2, 2, -2]});";
 
         $inputs = [
