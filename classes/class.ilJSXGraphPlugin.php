@@ -22,9 +22,15 @@ class ilJSXGraphPlugin extends ilPageComponentPlugin {
         array &$a_properties,
         string $a_plugin_version
     ): void {
-        $newid = uniqid("jsxgraphbox");
-        $a_properties["jsxcode"] = str_replace($a_properties["jsxID"], $newid, $a_properties["jsxcode"]);
-        $a_properties["jsxID"] = $newid;
+        $old_id = $a_properties["jsxID"] ?? $a_properties["graphbox"] ?? "";
+        $new_id = uniqid("jsxgraphbox");
+
+        if ($old_id !== "") {
+            $a_properties["jsxcode"] = str_replace($old_id, $new_id, $a_properties["jsxcode"] ?? "");
+        }
+
+        $a_properties["jsxID"] = $new_id;
+        unset($a_properties["graphbox"]);
     }
 
     public static function getInstance(): self
